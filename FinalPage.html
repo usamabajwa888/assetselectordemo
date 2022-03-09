@@ -2718,7 +2718,7 @@ display: inline-block;
 object-fit: contain;
 
 " >
-  
+  <img src="" id="myText" />
      <script>
         var Pic = ""
   
@@ -2727,7 +2727,7 @@ object-fit: contain;
 			var url = new URL(url_string);
 			var c = url.searchParams.get("assetUrl");
 
-			document.getElementById("myText").innerHTML = c;
+			document.getElementById("myText").src = c;
         }
   
         displayImage(Pic);
