@@ -2720,14 +2720,23 @@ object-fit: contain;
 " >
   <img id="myText" src="" >
      <script>
-        var Pic = ""
+        
   
         
             var url_string =  window.location.href; 
 			var url = new URL(url_string);
 			var c = url.searchParams.get("assetUrl");
+			
+			if (c.includes("crop") == true)
+            {
+      		   document.getElementById("myText").src = c;
+		    } 
+            else
+            {
+  				document.getElementById("demo2").innerHTML = url;
+		    }
 
-			document.getElementById("myText").src = c;
+			
         
   
         
