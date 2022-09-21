@@ -2735,12 +2735,16 @@ object-fit: contain;
 			   document.getElementById("IMAGES").style.display = 'inline';
       		   document.getElementById("SHOWIMAGE").src = c;
 		    } 
-            else
+            else if (c.includes("crop") == false && c.includes("documents"))
 			{
 			    document.getElementById("DOCUMENTS").style.display = 'inline';
 				document.getElementById("TOBEOVERWRITTEN").href = c;
 			}
-
+			else
+            {
+  				document.getElementById("IMAGES").style.display = 'inline';
+				document.getElementById("SHOWIMAGE").src = c;
+		    }
 
         
     </script>
